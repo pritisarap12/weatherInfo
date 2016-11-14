@@ -9,5 +9,6 @@
 
 virtualenv env 
 source env/bin/activate
-pip install -r requirements.txt
+pip install -r requirnments.txt
+python test.py
 python run.py
