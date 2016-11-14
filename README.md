@@ -10,6 +10,7 @@ Requrnments:
 Usage:
         1.Clone the repository localy and cd into the directory:
                 $ git clone https://github.com/pritisarap12/weatherInfo.git
+                
                 $ cd weatherInfo
 
         2.Run create_env.sh it will:
