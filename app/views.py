@@ -1,5 +1,5 @@
 from flask_restful import Resource
-from flask import jsonify, json, Response
+from flask import jsonify, json, Response, redirect
 import datetime
 from flask_httpauth import HTTPBasicAuth
 import requests
@@ -43,6 +43,13 @@ def validateDateTime(date, time):
         else:
             return False
 
+
+class BasicAPI(Resource):
+
+    """Redirect to http://openweathermap.org/"""
+    @auth.login_required
+    def get(self):
+	return redirect(configData.testdata["redirectURL"])
 
 class GetWeatherInfoAPI(Resource):
 

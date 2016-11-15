@@ -17,7 +17,12 @@ Usage:
 
         2.Run create_env.sh it will:
                 1. Create and activate virtual environment
+
                 2. Install all the requirnments
-                3. Run the application
+		
+		3. Test the application
+		
+		4. Run the application
+
                         -To see your application, access this url in your browser:
-                                http://192.168.0.7:8000/weather/london/<date>/<time>/
+                                http://<IP>:<port>/weather/london/<date>/<time>/

@@ -5,6 +5,13 @@ from flask_restful import Api
 app = Flask(__name__)
 api = Api(app)
 
+
+api.add_resource(views.BasicAPI,
+                 '/', strict_slashes=False, endpoint="basic")
+api.add_resource(views.BasicAPI,
+                 '/weather/london', strict_slashes=False, endpoint="basiclondon")
+api.add_resource(views.BasicAPI,
+                 '/weather/', strict_slashes=False, endpoint="basicweather")
 api.add_resource(views.GetWeatherInfoAPI,
                  '/weather/london/<date>/<time>', strict_slashes=False, endpoint="info")
 api.add_resource(views.GetPressureAPI,
